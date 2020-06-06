@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Home</title>
+    <link href="../HomeStyle.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../HomeScript.js"></script>
+</head>
+<body>
+<div class="nav_bar">
+    <a class="active" href="HomeUser">Home</a>
+    <a href="MyBookmarks">My bookmarks</a>
+    <div class="connect_container">
+        <div class="logout-container">
+            <button  onclick="logout()" style="width:auto;">Log out</button>
+        </div>
+    </div>
+</div>
+
+<div class="search_container">
+    <h2>Quarantine and Chill</h2>
+    <input type="text" id="search_bar" onkeyup="getMovie(this.value)" placeholder="Enter movie title.." />
+</div>
+
+<div id="output_container">
+    <div id="output" >
+        <h3 id="movieTitle"></h3>
+        <div id="releasedContent"></div>
+        <div id="genreContent"></div>
+        <div id="plotContent" ></div>
+        <div id="imgPoster"></div>
+        <div id="listButton"></div>
+    </div>
+</div>
+
+</body>
+</html>

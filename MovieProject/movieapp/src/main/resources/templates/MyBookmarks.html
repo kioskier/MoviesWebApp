@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Bookmarks</title>
+    <link href="../HomeStyle.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../HomeScript.js"></script>
+</head>
+<body onload="getBookmarkMovies()">
+<div class="nav_bar">
+    <a class="active" href="HomeUser">Home</a>
+    <a href="MyBookmarks">My bookmarks</a>
+    <div class="connect_container">
+        <div class="logout-container">
+            <button  onclick="logout()" style="width:auto;">Log out</button>
+        </div>
+    </div>
+</div>
+<h1 onclick="getBookmarkMovies()" style="color:#c83349;text-align: center;margin-top: 5%">My Movie List</h1>
+<div id="moviesListContainer" style="padding-left: 30%;"></div>
+
+
+</body>
+</html>

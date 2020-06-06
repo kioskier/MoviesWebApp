@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="../HomeStyle.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../HomeScript.js"></script>
+</head>
+<body>
+    <div class="nav_bar">
+        <a class="active" href="Home">Home</a>
+        <div class="connect_container">
+            <div class="login-container">
+                <button onclick="document.getElementById('login_popup').style.display='block'" style="width:auto;">Log in
+                </button>
+            </div>
+            <div class="signup-container">
+                <button onclick="document.getElementById('signup_popup').style.display='block'" style="width:auto;">Sign
+                    up
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="signup_popup" class="modal">
+        <span onclick="document.getElementById('signup_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="usernameSign"><b>Email</b></label>
+                <input type="text" placeholder="Enter your email" id="usernameSign" required>
+
+                <label for="passwordSign"><b>Password</b></label>
+                <input id="passwordSign" type="password" placeholder="Enter Password" required>
+
+                <label for="passwordConfirm"><b>Repeat Password</b></label>
+                <input id="passwordConfirm" type="password" placeholder="Repeat Password" required>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('signup_popup').style.display='none'"
+                            class="cancelbtn">Cancel
+                    </button>
+                    <button class="signupbtn" onclick="SignUpValidation()">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="login_popup" class="modal">
+        <span onclick="document.getElementById('login_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" >
+            <div class="container">
+                <h1>Log in</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="usernameLog"><b>Email</b></label>
+                <input type="text" placeholder="Enter your email" id="usernameLog">
+
+                <label for="passwordLog"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="passwordLog">
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('login_popup').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="loginVal()" class="loginbtn">Log in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="search_container">
+        <h2>Quarantine and Chill</h2>
+        <input type="text" id="search_bar" onkeyup="getMovie(this.value)" placeholder="Enter movie title.." />
+    </div>
+
+    <div id="output_container">
+        <div id="output" >
+            <h3 id="movieTitle"></h3>
+            <div id="releasedContent"></div>
+            <div id="genreContent"></div>
+            <div id="plotContent"></div>
+            <div id="imgPoster"></div>
+        </div>
+    </div>
+
+</body>
+</html>
